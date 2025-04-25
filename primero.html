@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" href="icono.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magali &#9829;</title>
+    <style>
+        /* Estilos para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .contenido {
+                padding: 20px; /* Añadir un poco de padding */
+            }
+
+            .txt {
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top: 30px; /* Espacio superior reducido en móviles */
+                padding: 20px; /* Un poco de reducción de padding en pantallas pequeñas */
+            }
+
+            .boton-principal {
+                padding: 10px 20px; /* Ajuste del tamaño del botón en pantallas pequeñas */
+                font-size: 14px; /* Fuente un poco más pequeña */
+            }
+
+            .titulo p {
+                font-size: 24px; /* Ajuste del tamaño del texto del header */
+            }
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body{
+            height: 100%;
+        }
+        
+        body{
+            background-image: url("https://img.freepik.com/foto-gratis/forma-corazon-flores-eustoma-sobre-fondo-rosa_23-2147923983.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            background-attachment: fixed;
+            flex: 2;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+        }
+
+        .contenido {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+
+        }
+
+
+        .txt {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px 30px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 640px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+            margin: 50px auto 0 auto;
+            /* margin-top: 100px;  Espacio debajo del título */
+            border: 2px solid lightpink;
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        p {
+            text-align: justify;
+            margin-top: 10px;
+        }
+
+        .slider {
+            margin: 40px auto 20px auto;
+            margin-top: 40px;
+            width: 90%;
+            max-width: 160px;
+            max-height: 30vh;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .slide-track img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .slider-controls {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 5px;
+        }
+
+        .slider-controls button {
+            padding: 4px 8px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+                top: 10px;
+            }
+
+            .boton-volver {
+                top: 10px;
+                left: 10px;
+            }
+
+            .enviar {
+                font-size: 0.9em;
+                padding: 0.6em;
+            }
+
+            .txt {
+                margin-top: 60px;
+            }
+        }
+        .titulo {
+            width: 100%;
+            padding: 15px 20px;
+            background-color: rgba(255, 240, 245, 0.8); /* color suave y semi-transparente */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid lightpink;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+        align-items: center;
+        }   
+
+        .titulo p {
+            font-size: 28px;
+            color: #c2185b;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+            margin: 0;
+            flex: 1;
+            text-align: center;
+        }
+
+        .titulo a {
+            text-decoration: none;
+        }
+
+        .titulo .enviar {
+            background-color: #ffb6c1;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            transition: 0.3s ease;
+        }
+
+        .titulo .enviar:hover {
+            background-color: #f48fb1;
+            transform: scale(1.05);
+        }
+        .boton-principal {
+            margin-top: 2%;
+            margin-bottom: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            text-align: center;
+        }
+
+        .boton-principal:hover {
+            transform: scale(1.05);
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="titulo">
+        <p>Magali ❤️</p>
+        <a href="index.html">
+            <button class="enviar">Volver</button>
+        </a>
+    </header>
+    <div class="contenido">
+        <div class="mitad derecha">
+            <div class="boton-volver">
+            </div>
+
+            <div class = "txt">
+                <button class="boton-principal">Dale click</button>
+                <p>Hola.</p>
+                <p>
+                    Espero te encuentres bién. Desde hace tiempo he querido poder entregarte una carta, 
+                    pero no sabía cómo empezar. A veces son tantas las cosas que quiero decirte, sin embargo no
+                    sabia como poder expresartelas en palabras y me costaba encontrar la manera correcta de decirlo.<br>
+                    La verdad es que no te conozco tanto... al menos aún. Pero hay algo en ti que me 
+                    hace querer saberlo todo. Me gustas y no de la una forma superficial o momentánea. Me gustas porque tu presencia 
+                    me inspira curiosidad, calma y alegría al mismo tiempo. Y eso nunca me a pasado.<br>
+                    Me gustaría conocer la historia detrás de tu mirada, lo que sueñas cuando el mundo guarda silencio. Quisiera saber 
+                    qué cosas te dan miedo, qué heridas has sanado, qué batallas sigues peleando en silencio. Me interesa saber que te hace reír a carcajadas, que canciones te 
+                    hacen cerrar los ojos y sentir, qué cosas te enojan y por qué. <br>
+                    Quiero escucharte hablar de tus sueños, incluso los más locos. Saber qué esperas del futuro, qué quieres construir, qué personas te han marcado y cuáles has dejado ir.
+                    Me gustaría descubrir tus rarezas, tus momentos de debilidad, tus lados oscuros y también esos que brillan y que quizá ni tú notas.<br>
+                    Quiero saber si crees en el amor, si alguna vez te rompieron el corazón, si has amado tanto que dolió, o si estás esperando a alguien que te abrace con calma, sin miedo, sin prisas.
+                    No te escribo esto para apresurar nada, ni para que pienses que espero algo inmediato. Solo quería abrir una pequeña puerta a todo lo que me encantaria conocer de ti, si tú alguna vez decides compartirlo.<br>
+                    Tal vez todo esto suene demasiado para alguien que aún no forma parte de tu día a día. Pero a veces la conexión con una persona no se mide por el tiempo, sino por lo que te despierta, y tú... tú despertaste en mí muchas ganas de sentir y de descubrir.<br><br>
+                    Gracias por ser como eres, por lo que transmites, por lo que provocas sin darte cuenta. 
+                    Me gustas, y si algún día te nace, me encantaría que podamos conocernos más, sin miedo. Yo estoy aquí, con el corazón abierto, con respeto y sinceridad.<br><br>
+                    Con mucho cariño te escribo esta carta ❤️.
+                </p>
+            </div>
+            <div class="slider" id="slider">
+                <div class="slide-track" id="slideTrack">
+                    <img src="magi.jpeg" alt="1">
+                    <img src="magi1.jpeg" alt="3">
+                    <img src="magi2.jpeg" alt="4">
+                    <img src="magi3.jpeg" alt="5">
+                </div>
+                <div class="slider-controls">
+                    <button onclick="prevSlide()">⟨</button>
+                    <button onclick="nextSlide()">⟩</button>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <audio id="bg-music" autoplay loop>
+                <source src="Her.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio HTML5.
+            </audio>  
+            <script>
+                window.addEventListener('DOMContentLoaded', () => {
+                    const audio = document.getElementById('bg-music');
+                
+                    // Intenta reproducir al cargar (puede fallar sin interacción del usuario)
+                    audio.volume = 0.5;
+                    audio.play().catch(() => {
+                        // Si falla, espera la primera interacción del usuario
+                        const activarAudio = () => {
+                            audio.play();
+                            document.removeEventListener('click', activarAudio);
+                        };
+                        document.addEventListener('click', activarAudio);
+                    });
+                });
+                </script>
+            <script>
+            const slideTrack = document.getElementById('slideTrack');
+            const slider = document.getElementById('slider');
+            const totalSlides = slideTrack.children.length;
+            let currentIndex = 0;
+            let interval;
+        
+            function updateSlide() {
+              slideTrack.style.transform = `translateX(-${currentIndex * 160}px)`;
+            }
+        
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateSlide();
+            }
+        
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateSlide();
+            }
+        
+            function startSlider() {
+              interval = setInterval(nextSlide, 6000); // 30s / 5 imágenes = 6s por imagen
+            }
+        
+            function stopSlider() {
+                clearInterval(interval);
+            }
+        
+            slider.addEventListener('mouseover', stopSlider);
+            slider.addEventListener('mouseout', startSlider);
+        
+            startSlider();
+            </script>
+                
+</body>
+</html>

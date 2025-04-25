@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="icono.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magali &#9829; </title>
+    <style>
+            /* Media Queries para diferentes tamaños de pantalla */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 0.9rem;
+            }
+        }
+        body{
+            background-image: url("tres.png"); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            Margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .principal{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+        }
+        .enviar{
+            width: 38%;
+            padding: 0.8em;
+            cursor: pointer;
+            display: inline;
+            border: 0;
+            border-radius: 30px;
+            border: 1px solid black;
+            font-size: 1em;
+            color: black;
+            background: #56fcbb;
+            text-align: center;
+            margin: 1em .5em;
+            font-weight: bold;
+        }
+        #gif{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px; /* Opcional */
+            /*margin-right: 20px;
+            margin-top: 10px;*/
+            border-radius: 30px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class ="principal">
+        <h1>HOLA  BIENVENIDA &#9829;</h1>
+        <a href="primero.html">
+            <button class="enviar">Haz click</button>
+        </a>
+    </div>
+    <img id= "gif" src="https://i.pinimg.com/originals/94/2d/48/942d4887a06dca5b59f8b74dd909b323.gif" alt="GIF divertido" width="200">
+
+</body>
+</html>
